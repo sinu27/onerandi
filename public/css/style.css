@@ -1,0 +1,80 @@
+.container { display: flex; }
+@media (max-width: 400px) {
+  .container { display: block; }
+}
+.box1 {
+  background: black;
+  text-align: center;
+  flex: 1;
+}
+.box2 {
+  background: black;
+  padding-left: 0.5em;
+  flex: 3;
+    font-size: 1.5em;
+}
+
+
+.box2left {
+  position:absolute;
+  width:300px;
+  height: 600px;
+  border: 1px solid white;
+  overflow:auto;
+
+}
+.box2right {
+  position:relative;
+  width:40%;
+  left:300px;
+  height:600px;
+  border: 1px solid white;
+  overflow:auto;
+  text-align: center;
+
+}
+
+
+body{
+	background-color: black;
+	color: white;
+
+	font-size:0.74em;
+  margin:0;
+  padding:0;
+}
+body,textarea{
+    font-family:돋움,dotum;
+    color:white;
+}
+#boxText{
+
+    margin:1em auto 0;
+}
+fieldset{
+    padding:1;
+    border:0;
+}
+
+#samestyledivid,
+textarea{
+    width:150px;
+    height:515.68px;
+    font-size:1.2em;
+    line-height:1.35em;
+    padding:1px 1px 1;
+    border-left:1px solid white;
+    border-top:5px solid white;
+    border-right:1px solid white;
+    border-bottom:1px solid white;
+    margin-top:1em;
+    margin-bottom:1em;
+    overflow:auto;
+}
+span{
+    display:inline-block;
+    padding: 5px;
+    line-height: 1.5em;
+    font-family: arial;
+    padding-left: 15px;
+}

@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <% include ./header.ejs %>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script language="javascript">
+    function input_Text(){
+      //cho bul yong jae jun hidden byun hee rest
+        var inputdata = document.getElementById("inputtext").value;
+        var allarr = new Array();
+        var choarr = new Array();
+        var bularr = new Array();
+        var yongarr = new Array();
+        var jaearr = new Array();
+        var junarr = new Array();
+        var hiddenarr = new Array();
+        var byunarr = new Array();
+        var heearr = new Array();
+        var restarr = new Array();
+        var allarrangearr = new Array();
+        allarr=inputdata.replace( /\n/g, " " ).split(' ');
+        for(i=0;i<allarr.length;i++){
+          if(allarr[i].match(/초월/)){
+            choarr.push(allarr[i]);
+            if(choarr.length%3==1){
+              choarr.push('<br />');
+            }
+          }else if(allarr[i].match(/불멸/)){
+            bularr.push(allarr[i]);
+            if(bularr.length%3==1){
+              bularr.push('<br />');
+            }
+          }else if(allarr[i].match(/영원/)){
+            yongarr.push(allarr[i]);
+            if(yongarr.length%3==1){
+              yongarr.push('<br />');
+            }
+          }else if(allarr[i].match(/제한/)){
+            jaearr.push(allarr[i]);
+            if(jaearr.length%3==1){
+              jaearr.push('<br />');
+            }
+          }else if(allarr[i].match(/전설/)){
+            junarr.push(allarr[i]);
+            if(junarr.length%3==1){
+              junarr.push('<br />');
+            }
+          }else if(allarr[i].match(/히든/)){
+            hiddenarr.push(allarr[i]);
+            if(hiddenarr.length%3==1){
+              hiddenarr.push('<br />');
+            }
+          }else if(allarr[i].match(/변이/)){
+            byunarr.push(allarr[i]);
+            if(byunarr.length%3==1){
+              byunarr.push('<br />');
+            }
+          }else if(allarr[i].match(/희귀/)){
+            heearr.push(allarr[i]);
+            if(heearr.length%3==1){
+              heearr.push('<br />');
+            }
+          }else {
+            restarr.push(allarr[i]);
+            if(restarr.length%3==1){
+              restarr.push('<br />');
+            }
+          }
+        }
+
+
+        document.getElementById("cho").innerHTML  = choarr.join(' ');
+        document.getElementById("bul").innerHTML  = bularr.join(' ');
+        document.getElementById("yong").innerHTML  = yongarr.join(' ');
+        document.getElementById("jae").innerHTML  = jaearr.join(' ');
+        document.getElementById("jun").innerHTML  = junarr.join(' ');
+        document.getElementById("hidden").innerHTML  = hiddenarr.join(' ');
+        document.getElementById("byun").innerHTML  = byunarr.join(' ');
+        document.getElementById("hee").innerHTML  = heearr.join(' ');
+        document.getElementById("rest").innerHTML  = restarr.join(' ');
+        document.getElementById("arrange").innerHTML = choarr.join(' ')+' '+bularr.join(' ')+' '+yongarr.join(' ')+' '+jaearr.join(' ')+' '+junarr.join(' ')+' '+hiddenarr.join(' ')+' '+byunarr.join(' ')+' '+heearr.join(' ')+' '+restarr.join(' ');
+    }
+
+    </script>
+
+  </head>
+  <script>
+    window.onload = function(){
+        $(document).ready(function(){
+            var clipboard = new Clipboard('.clipboard');
+        });
+    };
+  </script>
+  <body>
+    <div class='container'>
+        <% include ./body1.ejs %>
+        <% include ./body2.ejs %>
+    </div>
+  </body>
+</html>
