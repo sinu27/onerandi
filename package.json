@@ -1,18 +1,15 @@
 {
-  "name": "server",
-  "engines": {
-    "node": "11.11.0",
-    "npm": "6.9.0"
-  },
+  "name": "express_tutorial",
   "version": "1.0.0",
-  "description": "",
+  "description": "oneran",
   "main": "server2.js",
   "scripts": {
     "start": "node server2.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://sinu27.github.io/onerandi/"
+  },
   "author": "sinu",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^3.0.0"
-  }
+  "license": "ISC"
 }
